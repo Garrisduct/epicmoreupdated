@@ -120,7 +120,8 @@ UICorner.Parent = MainFrame
 local Title = Instance.new("TextLabel")
 Title.Size = UDim2.new(1, 0, 0, 40)
 Title.Position = UDim2.new(0, 0, 0, 0)
-Title.Text = "Super Ring Parts V5"
+Title.Text = "Super Ring V5"
+Title.TextXAlignment = Enum.TextXAlignment.Left
 Title.TextColor3 = Color3.fromRGB(255, 255, 255) -- White
 Title.BackgroundColor3 = Color3.fromRGB(0, 153, 76) -- Little dark green
 Title.Font = Enum.Font.Fondamento -- More elegant font
@@ -214,7 +215,7 @@ MinimizeButton.Parent = MainFrame
 
 local Close = Instance.new("TextButton")
 Close.Size = UDim2.new(0, 30, 0, 30)
-Close.Position = UDim2.new(1, -45, 0, 5)
+Close.Position = UDim2.new(1, -60, 0, 5)
 Close.Text = "X"
 Close.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Green
 Close.TextColor3 = Color3.fromRGB(255, 255, 255) -- White
@@ -410,4 +411,3 @@ IncreaseRadius.MouseButton1Click:Connect(function()
 	RadiusDisplay.Text = "Radius: " .. radius
 	playSound("12221967")
 end)
---ahhhh
