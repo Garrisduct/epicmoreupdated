@@ -1,4 +1,4 @@
--- Universal Part Claim
+ -- Universal Part Claim
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
@@ -369,23 +369,28 @@ workspace.DescendantAdded:Connect(addPart)
 workspace.DescendantRemoving:Connect(removePart)
 
 RunService.Heartbeat:Connect(function()
-	-- Orbit update
-	local radius = 50
-	local angle = 0
-	local isActive = false
+	if not ringPartsEnabled then return end
 
-	RunService.Heartbeat:Connect(function(dt)
-		if isActive then
-			angle += dt * 2  -- Adjust speed here
-			local orbitPos = humanoidRootPart.Position + Vector3.new(
-				math.cos(angle) * radius,
-				0,
-				math.sin(angle) * radius
-			)
-			Attachment1.WorldPosition = orbitPos
+	local humanoidRootPart = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+	if humanoidRootPart then
+		local tornadoCenter = humanoidRootPart.Position
+		for _, part in pairs(parts) do
+			if part.Parent and not part.Anchored then
+				local pos = part.Position
+				local distance = (Vector3.new(pos.X, tornadoCenter.Y, pos.Z) - tornadoCenter).Magnitude
+				local angle = math.atan2(pos.Z - tornadoCenter.Z, pos.X - tornadoCenter.X)
+				local newAngle = angle + math.rad(rotationSpeed)
+				local targetPos = Vector3.new(
+					tornadoCenter.X + math.cos(newAngle) * math.min(radius, distance),
+					tornadoCenter.Y + (height * (math.abs(math.sin((pos.Y - tornadoCenter.Y) / height)))),
+					tornadoCenter.Z + math.sin(newAngle) * math.min(radius, distance)
+				)
+				local directionToTarget = (targetPos - part.Position).unit
+				part.Velocity = directionToTarget * attractionStrength
+			end
 		end
-	end)
-
+	end
+end)
 
 -- Button functionality
 ToggleButton.MouseButton1Click:Connect(function()
