@@ -304,11 +304,11 @@ if not getgenv().Network then
 		Velocity = Vector3.new(14.46262424, 14.46262424, 14.46262424)
 	}
 	Network.RetainPart = function(Part)
-		if typeof(Part) == "Instance" and Part:IsA("BasePart") and Part:IsA("Part") and Part:IsDescendantOf(workspace) then
+		if typeof(Part) == "Instance" and Part:IsA("BasePart") and Part:IsDescendantOf(workspace) then
 			table.insert(Network.BaseParts, Part)
 			Part.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
 			Part.CanCollide = false
-			Part.Transparency = 0.7
+			Part.Transparency = 0.9
 		end
 	end
 	local function EnablePartControl()
