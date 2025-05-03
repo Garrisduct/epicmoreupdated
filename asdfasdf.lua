@@ -328,7 +328,7 @@ end
 -- Edits
 local radius = 50
 local height = 100
-local rotationSpeed = 0.5
+local rotationSpeed = 0.1
 local attractionStrength = 1000
 local ringPartsEnabled = false
 
