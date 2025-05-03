@@ -368,47 +368,24 @@ end
 workspace.DescendantAdded:Connect(addPart)
 workspace.DescendantRemoving:Connect(removePart)
 
-
+RunService.Heartbeat:Connect(function()
+	-- Orbit update
 	local radius = 50
 	local angle = 0
-	local orbiting = false
+	local isActive = false
 
-	-- Update GUI text
-	local function updateRadiusDisplay()
-		RadiusDisplay.Text = "Radius: " .. tostring(radius)
-	end
-
-	-- Orbit loop
 	RunService.Heartbeat:Connect(function(dt)
-		if orbiting then
-			angle += dt * 1.5 -- orbit speed
-			local x = math.cos(angle) * radius
-			local z = math.sin(angle) * radius
-			Part.Position = humanoidRootPart.Position + Vector3.new(x, 0, z)
+		if isActive then
+			angle += dt * 2  -- Adjust speed here
+			local orbitPos = humanoidRootPart.Position + Vector3.new(
+				math.cos(angle) * radius,
+				0,
+				math.sin(angle) * radius
+			)
+			Attachment1.WorldPosition = orbitPos
 		end
 	end)
 
-	-- Button controls
-	ToggleButton.MouseButton1Click:Connect(function()
-		orbiting = not orbiting
-		ToggleButton.Text = orbiting and "On" or "Off"
-		ToggleButton.BackgroundColor3 = orbiting and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 0, 0)
-		playSound("2865227271")
-	end)
-
-	DecreaseRadius.MouseButton1Click:Connect(function()
-		radius = math.max(10, radius - 5)
-		updateRadiusDisplay()
-		playSound("2865227271")
-	end)
-
-	IncreaseRadius.MouseButton1Click:Connect(function()
-		radius = radius + 5
-		updateRadiusDisplay()
-		playSound("2865227271")
-	end)
-
-	updateRadiusDisplay()
 
 -- Button functionality
 ToggleButton.MouseButton1Click:Connect(function()
