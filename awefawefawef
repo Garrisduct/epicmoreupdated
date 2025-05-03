@@ -129,7 +129,6 @@ Title.Parent = MainFrame
 
 -- Round the title
 local TitleCorner = Instance.new("UICorner")
-TitleCorner.CornerRadius = UDim.new(0, 20)
 TitleCorner.Parent = Title
 
 local ToggleButton = Instance.new("TextButton")
@@ -212,6 +211,20 @@ MinimizeButton.TextColor3 = Color3.fromRGB(255, 255, 255) -- White
 MinimizeButton.Font = Enum.Font.Fondamento
 MinimizeButton.TextSize = 15
 MinimizeButton.Parent = MainFrame
+
+local Close = Instance.new("TextButton")
+Close.Size = UDim2.new(0, 30, 0, 30)
+Close.Position = UDim2.new(1, -20, 0, 5)
+Close.Text = "X"
+Close.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Green
+Close.TextColor3 = Color3.fromRGB(255, 255, 255) -- White
+Close.Font = Enum.Font.Fondamento
+Close.TextSize = 15
+Close.Parent = MainFrame
+
+Close.MouseButton1Down:Connect(function()
+	MainFrame:Destroy()
+end)
 
 -- Round the minimize button
 local MinimizeCorner = Instance.new("UICorner")
