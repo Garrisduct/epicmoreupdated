@@ -6,6 +6,7 @@
 local PriVLib = Instance.new("ScreenGui")
 local Topbar = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
 local CloseBttn = Instance.new("TextButton")
 local MinBttn = Instance.new("TextButton")
 local Body = Instance.new("Frame")
@@ -25,14 +26,14 @@ local UICorner_5 = Instance.new("UICorner")
 local Trigger = Instance.new("TextButton")
 local OutputLable = Instance.new("TextLabel")
 local UICorner_6 = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
 local WalkSpeedSlider = Instance.new("Frame")
 local Fill_2 = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
 local Trigger_2 = Instance.new("TextButton")
 local OutputLable_2 = Instance.new("TextLabel")
 local UICorner_8 = Instance.new("UICorner")
-local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
 local Scripts = Instance.new("TextButton")
 local ScriptsTab2 = Instance.new("Frame")
 local WSETC_2 = Instance.new("Frame")
@@ -93,13 +94,25 @@ Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Title.BackgroundTransparency = 1.000
 Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.0147991544, 0, 0, 0)
+Title.Position = UDim2.new(0.0147991581, 0, -0.0500000007, 0)
 Title.Size = UDim2.new(0, 157, 0, 20)
 Title.Font = Enum.Font.SourceSans
 Title.Text = "PriV"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 18.000
 Title.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel.Parent = Title
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.0509554148, 0, 0.349999994, 0)
+TextLabel.Size = UDim2.new(0, 101, 0, 13)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "V0.1.1"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
 
 CloseBttn.Name = "CloseBttn"
 CloseBttn.Parent = Topbar
@@ -257,17 +270,17 @@ OutputLable.TextSize = 14.000
 UICorner_6.CornerRadius = UDim.new(0, 3)
 UICorner_6.Parent = JumpSpeedSlider
 
-TextLabel.Parent = WSETC
-TextLabel.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.202170789, 0, 0.0886769146, 0)
-TextLabel.Size = UDim2.new(0, 211, 0, 8)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "WalkSpeed"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 21.000
+TextLabel_2.Parent = WSETC
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.202170789, 0, 0.0886769146, 0)
+TextLabel_2.Size = UDim2.new(0, 211, 0, 8)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "WalkSpeed"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 21.000
 
 WalkSpeedSlider.Name = "WalkSpeedSlider"
 WalkSpeedSlider.Parent = WSETC
@@ -314,17 +327,17 @@ OutputLable_2.TextSize = 14.000
 UICorner_8.CornerRadius = UDim.new(0, 3)
 UICorner_8.Parent = WalkSpeedSlider
 
-TextLabel_2.Parent = WSETC
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.200723574, 0, 0.324280888, 0)
-TextLabel_2.Size = UDim2.new(0, 211, 0, 23)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "JumpSpeed"
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextSize = 21.000
+TextLabel_3.Parent = WSETC
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.200723574, 0, 0.324280888, 0)
+TextLabel_3.Size = UDim2.new(0, 211, 0, 23)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "JumpSpeed"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 21.000
 
 Scripts.Name = "Scripts"
 Scripts.Parent = Body
@@ -661,7 +674,17 @@ UICorner_22.Parent = PFP_2
 
 -- Scripts:
 
-local function NSOPKMK_fake_script() -- MinBttn.LocalScript 
+local function AIHK_fake_script() -- CloseBttn.Close 
+	local script = Instance.new('LocalScript', CloseBttn)
+
+	local b = script.Parent
+	
+	b.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(AIHK_fake_script)()
+local function AJGF_fake_script() -- MinBttn.Min 
 	local script = Instance.new('LocalScript', MinBttn)
 
 	local Button = script.Parent
@@ -671,8 +694,8 @@ local function NSOPKMK_fake_script() -- MinBttn.LocalScript
 		script.Parent.Parent.Parent.ReoPen.Visible = true
 	end)
 end
-coroutine.wrap(NSOPKMK_fake_script)()
-local function ZJSEPW_fake_script() -- Topbar.UIDrag 
+coroutine.wrap(AJGF_fake_script)()
+local function XHPL_fake_script() -- Topbar.UIDrag 
 	local script = Instance.new('LocalScript', Topbar)
 
 	-- Made by Real_IceyDev (@lceyDex) --
@@ -713,8 +736,8 @@ local function ZJSEPW_fake_script() -- Topbar.UIDrag
 		end
 	end)
 end
-coroutine.wrap(ZJSEPW_fake_script)()
-local function CRYNZ_fake_script() -- Player.LocalScript 
+coroutine.wrap(XHPL_fake_script)()
+local function LJPTAQI_fake_script() -- Player.PlayerScript 
 	local script = Instance.new('LocalScript', Player)
 
 	local Button = script.Parent
@@ -722,10 +745,11 @@ local function CRYNZ_fake_script() -- Player.LocalScript
 	Button.MouseButton1Down:Connect(function()
 		script.Parent.Parent.Parent.Body.PlayerTab1.Visible = true
 		script.Parent.Parent.Parent.Body.ScriptsTab2.Visible = false
+		script.Parent.Parent.Parent.Body.FEHUB3.Visible = false
 	end)
 end
-coroutine.wrap(CRYNZ_fake_script)()
-local function OCXNS_fake_script() -- PFP.PFP 
+coroutine.wrap(LJPTAQI_fake_script)()
+local function HOBXZTX_fake_script() -- PFP.PFP 
 	local script = Instance.new('LocalScript', PFP)
 
 	local Players = game:GetService("Players")
@@ -743,24 +767,24 @@ local function OCXNS_fake_script() -- PFP.PFP
 	end
 	
 end
-coroutine.wrap(OCXNS_fake_script)()
-local function BCLWXP_fake_script() -- DisplayName.UsernameScript 
+coroutine.wrap(HOBXZTX_fake_script)()
+local function MEMWI_fake_script() -- DisplayName.UsernameScript 
 	local script = Instance.new('LocalScript', DisplayName)
 
 	local P = game.Players.LocalPlayer
 	
 	script.Parent.Text = P.DisplayName
 end
-coroutine.wrap(BCLWXP_fake_script)()
-local function RKQNJ_fake_script() -- Username.UsernameScript 
+coroutine.wrap(MEMWI_fake_script)()
+local function UIZMUOA_fake_script() -- Username.UsernameScript 
 	local script = Instance.new('LocalScript', Username)
 
 	local P = game.Players.LocalPlayer
 	
 	script.Parent.Text = P.Name
 end
-coroutine.wrap(RKQNJ_fake_script)()
-local function SDBSYRX_fake_script() -- JumpSpeedSlider.Updater 
+coroutine.wrap(UIZMUOA_fake_script)()
+local function ASRVYRG_fake_script() -- JumpSpeedSlider.Updater 
 	local script = Instance.new('LocalScript', JumpSpeedSlider)
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
@@ -816,8 +840,8 @@ local function SDBSYRX_fake_script() -- JumpSpeedSlider.Updater
 	end)
 	
 end
-coroutine.wrap(SDBSYRX_fake_script)()
-local function JFFWBYS_fake_script() -- WalkSpeedSlider.Updater 
+coroutine.wrap(ASRVYRG_fake_script)()
+local function NFAKI_fake_script() -- WalkSpeedSlider.Updater 
 	local script = Instance.new('LocalScript', WalkSpeedSlider)
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
@@ -872,8 +896,8 @@ local function JFFWBYS_fake_script() -- WalkSpeedSlider.Updater
 	end)
 	
 end
-coroutine.wrap(JFFWBYS_fake_script)()
-local function YODBBT_fake_script() -- Scripts.LocalScript 
+coroutine.wrap(NFAKI_fake_script)()
+local function ACTUVY_fake_script() -- Scripts.ScriptsScript 
 	local script = Instance.new('LocalScript', Scripts)
 
 	local Button = script.Parent
@@ -881,10 +905,11 @@ local function YODBBT_fake_script() -- Scripts.LocalScript
 	Button.MouseButton1Down:Connect(function()
 		script.Parent.Parent.Parent.Body.ScriptsTab2.Visible = true
 		script.Parent.Parent.Parent.Body.PlayerTab1.Visible = false
+		script.Parent.Parent.Parent.Body.FEHUB3.Visible = false
 	end)
 end
-coroutine.wrap(YODBBT_fake_script)()
-local function BVOIFX_fake_script() -- INFYeild.InfGetter 
+coroutine.wrap(ACTUVY_fake_script)()
+local function LDWLF_fake_script() -- INFYeild.InfGetter 
 	local script = Instance.new('LocalScript', INFYeild)
 
 	local Button = script.Parent
@@ -893,8 +918,8 @@ local function BVOIFX_fake_script() -- INFYeild.InfGetter
 		script.Parent.Parent.Parent["WS/ETC"].Code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()"
 	end)
 end
-coroutine.wrap(BVOIFX_fake_script)()
-local function BQLGJAY_fake_script() -- EZHub.EZGettter 
+coroutine.wrap(LDWLF_fake_script)()
+local function WMJF_fake_script() -- EZHub.EZGettter 
 	local script = Instance.new('LocalScript', EZHub)
 
 	local Button = script.Parent
@@ -903,8 +928,8 @@ local function BQLGJAY_fake_script() -- EZHub.EZGettter
 		script.Parent.Parent.Parent["WS/ETC"].Code.Text = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()"
 	end)
 end
-coroutine.wrap(BQLGJAY_fake_script)()
-local function IHKYBEU_fake_script() -- SuperRing.Getter 
+coroutine.wrap(WMJF_fake_script)()
+local function MYWX_fake_script() -- SuperRing.Getter 
 	local script = Instance.new('LocalScript', SuperRing)
 
 	local Button = script.Parent
@@ -913,8 +938,8 @@ local function IHKYBEU_fake_script() -- SuperRing.Getter
 		script.Parent.Parent.Parent["WS/ETC"].Code.Text = "loadstring(game:HttpGet('https://raw.githubusercontent.com/Garrisduct/epicmoreupdated/refs/heads/main/asdfasdf.lua',true))()"
 	end)
 end
-coroutine.wrap(IHKYBEU_fake_script)()
-local function UWRAW_fake_script() -- Exec.ExecScript 
+coroutine.wrap(MYWX_fake_script)()
+local function OVLR_fake_script() -- Exec.ExecScript 
 	local script = Instance.new('LocalScript', Exec)
 
 	local Button = script.Parent
@@ -923,8 +948,8 @@ local function UWRAW_fake_script() -- Exec.ExecScript
 		loadstring(script.Parent.Parent["WS/ETC"].Code.Text)()
 	end)
 end
-coroutine.wrap(UWRAW_fake_script)()
-local function MSPCDWL_fake_script() -- Clear.ClearScript 
+coroutine.wrap(OVLR_fake_script)()
+local function NZAKUD_fake_script() -- Clear.ClearScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local Button = script.Parent
@@ -933,18 +958,20 @@ local function MSPCDWL_fake_script() -- Clear.ClearScript
 		script.Parent.Parent["WS/ETC"].Code.Text = ""
 	end)
 end
-coroutine.wrap(MSPCDWL_fake_script)()
-local function DLFUIHP_fake_script() -- FE.LocalScript 
+coroutine.wrap(NZAKUD_fake_script)()
+local function RYMAU_fake_script() -- FE.FEScript 
 	local script = Instance.new('LocalScript', FE)
 
 	local Button = script.Parent
 	
 	Button.MouseButton1Down:Connect(function()
-		script.Parent.Parent.Parent.Body.ScriptsTab2.Visible = true
+		script.Parent.Parent.Parent.Body.PlayerTab1.Visible = false
+		script.Parent.Parent.Parent.Body.ScriptsTab2.Visible = false
+		script.Parent.Parent.Parent.Body.FEHUB3.Visible = true
 	end)
 end
-coroutine.wrap(DLFUIHP_fake_script)()
-local function LMMT_fake_script() -- Grab.Getter 
+coroutine.wrap(RYMAU_fake_script)()
+local function YTBIAY_fake_script() -- Grab.Getter 
 	local script = Instance.new('LocalScript', Grab)
 
 	local Button = script.Parent
@@ -1013,25 +1040,25 @@ local function LMMT_fake_script() -- Grab.Getter
 	end)
 	
 end
-coroutine.wrap(LMMT_fake_script)()
+coroutine.wrap(YTBIAY_fake_script)()
 -- PriVLib.README is disabled.
-local function PHKI_fake_script() -- DisplayName_2.UsernameScript 
+local function OURA_fake_script() -- DisplayName_2.UsernameScript 
 	local script = Instance.new('LocalScript', DisplayName_2)
 
 	local P = game.Players.LocalPlayer
 	
 	script.Parent.Text = P.DisplayName
 end
-coroutine.wrap(PHKI_fake_script)()
-local function YCDISMO_fake_script() -- Username_2.UsernameScript 
+coroutine.wrap(OURA_fake_script)()
+local function RFQYFBF_fake_script() -- Username_2.UsernameScript 
 	local script = Instance.new('LocalScript', Username_2)
 
 	local P = game.Players.LocalPlayer
 	
 	script.Parent.Text = P.Name
 end
-coroutine.wrap(YCDISMO_fake_script)()
-local function XHHLMLS_fake_script() -- Trigger_3.LocalScript 
+coroutine.wrap(RFQYFBF_fake_script)()
+local function BXKTK_fake_script() -- Trigger_3.LocalScript 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local B = script.Parent
@@ -1041,8 +1068,8 @@ local function XHHLMLS_fake_script() -- Trigger_3.LocalScript
 		script.Parent.Parent.Parent.Topbar.Visible = true
 	end)
 end
-coroutine.wrap(XHHLMLS_fake_script)()
-local function XUOGHT_fake_script() -- PFP_2.PFP 
+coroutine.wrap(BXKTK_fake_script)()
+local function ZLFX_fake_script() -- PFP_2.PFP 
 	local script = Instance.new('LocalScript', PFP_2)
 
 	local Players = game:GetService("Players")
@@ -1060,8 +1087,8 @@ local function XUOGHT_fake_script() -- PFP_2.PFP
 	end
 	
 end
-coroutine.wrap(XUOGHT_fake_script)()
-local function UXQTLII_fake_script() -- ReoPen.UIDrag 
+coroutine.wrap(ZLFX_fake_script)()
+local function OGPANXC_fake_script() -- ReoPen.UIDrag 
 	local script = Instance.new('LocalScript', ReoPen)
 
 	-- Made by Real_IceyDev (@lceyDex) --
@@ -1102,4 +1129,4 @@ local function UXQTLII_fake_script() -- ReoPen.UIDrag
 		end
 	end)
 end
-coroutine.wrap(UXQTLII_fake_script)()
+coroutine.wrap(OGPANXC_fake_script)()
