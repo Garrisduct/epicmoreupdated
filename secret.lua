@@ -1,287 +1,341 @@
-local SKNNY = {};
-
--- StarterGui.Skinny
-SKNNY["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-SKNNY["1"]["ResetOnSpawn"] = false
-SKNNY["1"]["Name"] = [[Skinny]];
-SKNNY["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
 
--- StarterGui.Skinny.Background
-SKNNY["2"] = Instance.new("Frame", SKNNY["1"]);
-SKNNY["2"]["BorderSizePixel"] = 0;
-SKNNY["2"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
-SKNNY["2"]["Size"] = UDim2.new(0, 441, 0, 248);
-SKNNY["2"]["Position"] = UDim2.new(0.17107, 0, 0.13005, 0);
-SKNNY["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SKNNY["2"]["Name"] = [[Background]];
-
-
--- StarterGui.Skinny.Background.Title
-SKNNY["3"] = Instance.new("TextLabel", SKNNY["2"]);
-SKNNY["3"]["BorderSizePixel"] = 0;
-SKNNY["3"]["TextSize"] = 28;
-SKNNY["3"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-SKNNY["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SKNNY["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.ExtraLight, Enum.FontStyle.Normal);
-SKNNY["3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-SKNNY["3"]["BackgroundTransparency"] = 1;
-SKNNY["3"]["Size"] = UDim2.new(0, 146, 0, 24);
-SKNNY["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SKNNY["3"]["Text"] = [[Skinny]];
-SKNNY["3"]["Name"] = [[Title]];
-SKNNY["3"]["Position"] = UDim2.new(0.01587, 0, 0, 0);
-
-
--- StarterGui.Skinny.Background.UIStroke
-SKNNY["4"] = Instance.new("UIStroke", SKNNY["2"]);
-SKNNY["4"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-SKNNY["4"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Skinny.Background.Clear
-SKNNY["5"] = Instance.new("TextButton", SKNNY["2"]);
-SKNNY["5"]["BorderSizePixel"] = 0;
-SKNNY["5"]["TextSize"] = 14;
-SKNNY["5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-SKNNY["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SKNNY["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Light, Enum.FontStyle.Normal);
-SKNNY["5"]["BackgroundTransparency"] = 1;
-SKNNY["5"]["Size"] = UDim2.new(0, 204, 0, 24);
-SKNNY["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SKNNY["5"]["Text"] = [[Clear]];
-SKNNY["5"]["Name"] = [[Clear]];
-SKNNY["5"]["Position"] = UDim2.new(0.53741, 0, 0.90323, 0);
-
-
--- StarterGui.Skinny.Background.Clear.UIStroke
-SKNNY["6"] = Instance.new("UIStroke", SKNNY["5"]);
-SKNNY["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-SKNNY["6"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Skinny.Background.Clear.Execute Script
-SKNNY["7"] = Instance.new("LocalScript", SKNNY["5"]);
-SKNNY["7"]["Name"] = [[Execute Script]];
-
-
--- StarterGui.Skinny.Background.Execute
-SKNNY["8"] = Instance.new("TextButton", SKNNY["2"]);
-SKNNY["8"]["BorderSizePixel"] = 0;
-SKNNY["8"]["TextSize"] = 14;
-SKNNY["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-SKNNY["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SKNNY["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Light, Enum.FontStyle.Normal);
-SKNNY["8"]["BackgroundTransparency"] = 1;
-SKNNY["8"]["Size"] = UDim2.new(0, 222, 0, 24);
-SKNNY["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SKNNY["8"]["Text"] = [[Execute]];
-SKNNY["8"]["Name"] = [[Execute]];
-SKNNY["8"]["Position"] = UDim2.new(0, 0, 0.90323, 0);
-
-
--- StarterGui.Skinny.Background.Execute.UIStroke
-SKNNY["9"] = Instance.new("UIStroke", SKNNY["8"]);
-SKNNY["9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-SKNNY["9"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Skinny.Background.Execute.Execute Script
-SKNNY["a"] = Instance.new("LocalScript", SKNNY["8"]);
-SKNNY["a"]["Name"] = [[Execute Script]];
-
-
--- StarterGui.Skinny.Background.SF
-SKNNY["b"] = Instance.new("ScrollingFrame", SKNNY["2"]);
-SKNNY["b"]["Active"] = true;
-SKNNY["b"]["BorderSizePixel"] = 0;
-SKNNY["b"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
-SKNNY["b"]["Name"] = [[SF]];
-SKNNY["b"]["Size"] = UDim2.new(0, 285, 0, 186);
-SKNNY["b"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-SKNNY["b"]["Position"] = UDim2.new(0.00907, 0, 0.12903, 0);
-SKNNY["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.Skinny.Background.SF.Code
-SKNNY["c"] = Instance.new("TextBox", SKNNY["b"]);
-SKNNY["c"]["CursorPosition"] = -1;
-SKNNY["c"]["Name"] = [[Code]];
-SKNNY["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-SKNNY["c"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
-SKNNY["c"]["BorderSizePixel"] = 0;
-SKNNY["c"]["TextWrapped"] = true;
-SKNNY["c"]["TextSize"] = 14;
-SKNNY["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-SKNNY["c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-SKNNY["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SKNNY["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Light, Enum.FontStyle.Normal);
-SKNNY["c"]["PlaceholderText"] = [[-- Skinny was made by @sawdust]];
-SKNNY["c"]["Size"] = UDim2.new(0, 431, 0, 657);
-SKNNY["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SKNNY["c"]["Text"] = [[]];
-SKNNY["c"]["BackgroundTransparency"] = 1;
-SKNNY["c"]["ClearTextOnFocus"] = false;
-
-
--- StarterGui.Skinny.Background.SF.UIStroke
-SKNNY["d"] = Instance.new("UIStroke", SKNNY["b"]);
-SKNNY["d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-SKNNY["d"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Skinny.Background.SF2
-SKNNY["e"] = Instance.new("ScrollingFrame", SKNNY["2"]);
-SKNNY["e"]["Active"] = true;
-SKNNY["e"]["BorderSizePixel"] = 0;
-SKNNY["e"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
-SKNNY["e"]["Name"] = [[SF2]];
-SKNNY["e"]["Size"] = UDim2.new(0, 152, 0, 186);
-SKNNY["e"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-SKNNY["e"]["Position"] = UDim2.new(0.65533, 0, 0.12903, 0);
-SKNNY["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.Skinny.Background.SF2.Error
-SKNNY["f"] = Instance.new("TextBox", SKNNY["e"]);
-SKNNY["f"]["Name"] = [[Error]];
-SKNNY["f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-SKNNY["f"]["PlaceholderColor3"] = Color3.fromRGB(252, 255, 26);
-SKNNY["f"]["BorderSizePixel"] = 0;
-SKNNY["f"]["TextWrapped"] = true;
-SKNNY["f"]["TextSize"] = 14;
-SKNNY["f"]["TextColor3"] = Color3.fromRGB(255, 248, 22);
-SKNNY["f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-SKNNY["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SKNNY["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Light, Enum.FontStyle.Normal);
-SKNNY["f"]["PlaceholderText"] = [[-- Error Messages]];
-SKNNY["f"]["Size"] = UDim2.new(0, 146, 0, 657);
-SKNNY["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SKNNY["f"]["Text"] = [[]];
-SKNNY["f"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.Skinny.Background.SF2.UIStroke
-SKNNY["10"] = Instance.new("UIStroke", SKNNY["e"]);
-SKNNY["10"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-SKNNY["10"]["Color"] = Color3.fromRGB(255, 255, 255);
-
-
--- StarterGui.Skinny.Background.UIDrag
-SKNNY["11"] = Instance.new("LocalScript", SKNNY["2"]);
-SKNNY["11"]["Name"] = [[UIDrag]];
-
-
--- StarterGui.Skinny.Background.Clear.Execute Script
-local function C_7()
-local script = SKNNY["7"];
-	local Button = script.Parent
-	local Code = Button.Parent.SF.Code
-	
-	Button.MouseButton1Down:Connect(function()
-		Code.Text = ""
-	end)
-end;
-task.spawn(C_7);
--- StarterGui.Skinny.Background.Execute.Execute Script
-local function C_a()
-local script = SKNNY["a"];
-	local Button = script.Parent
-	local Code = Button.Parent.SF.Code
-	local ErrorTextBox = Button.Parent.SF2.Error
-	
-	local function DisableFE()
-		-- Using pcall to safely execute code and handle errors
-		local success, errorMsg = pcall(function()
-			local ReplicatedStorage = game:GetService("ReplicatedStorage")
-	
-			-- Loop through all RemoteEvents in ReplicatedStorage
-			local remoteEvents = {} -- Store RemoteEvents to avoid multiple lookups
-			for _, i in ipairs(ReplicatedStorage:GetDescendants()) do
-				if i:IsA("RemoteEvent") then
-					table.insert(remoteEvents, i)
+local v0 = string.char;
+local v1 = string.byte;
+local v2 = string.sub;
+local v3 = bit32 or bit;
+local v4 = v3.bxor;
+local v5 = table.concat;
+local v6 = table.insert;
+local function v7(v137, v138)
+	local v139 = {};
+	for v159 = 1, #v137 do
+		v6(v139, v0(v4(v1(v2(v137, v159, v159 + 1)), v1(v2(v138, 1 + (v159 % #v138), 1 + (v159 % #v138) + 1))) % 256));
+	end
+	return v5(v139);
+end
+local v8 = {};
+v8["1"] = Instance.new(v7("\226\192\201\32\227\181\224\11\216", "\126\177\163\187\69\134\219\167"), game:GetService(v7("\19\193\43\220\249\49\222", "\156\67\173\74\165")).LocalPlayer:WaitForChild(v7("\4\187\72\15\185\52\97\33\190", "\38\84\215\41\118\220\70")));
+v8["1"][v7("\98\19\49\23\234\127\24\17\2\255\71\24", "\158\48\118\66\114")] = false;
+v8["1"][v7("\133\37\29\51", "\155\203\68\112\86\19\197")] = v7("\117\214\63\242\78\97", "\152\38\189\86\156\32\24\133");
+v8["1"][v7("\198\126\169\66\249\79\133\67\244\86\177\79\243\69", "\38\156\55\199")] = Enum.ZIndexBehavior.Sibling;
+v8["2"] = Instance.new(v7("\142\111\125\37\22", "\35\200\29\28\72\115\20\154"), v8["1"]);
+v8["2"][v7("\59\176\195\219\136\62\7\16\165\212\239\132\52\49\21", "\84\121\223\177\191\237\76")] = 0 - 0;
+v8["2"][v7("\153\87\202\171\61\66\63\212\181\82\234\175\54\95\34\146", "\161\219\54\169\192\90\48\80")] = Color3.fromRGB(34, 85 - 51, 51 - 17);
+v8["2"][v7("\122\75\26\32", "\69\41\34\96")] = UDim2.new(505 - (351 + 154), 441, 1574 - (1281 + 293), 248);
+v8["2"][v7("\140\204\196\3\22\34\179\205", "\75\220\163\183\106\98")] = UDim2.new(266.17107 - (28 + 238), 0 - 0, 1559.13005 - (1381 + 178), 0);
+v8["2"][v7("\32\181\153\51\220\16\153\132\59\214\16\233", "\185\98\218\235\87")] = Color3.fromRGB(0 + 0, 0 + 0, 0 + 0);
+v8["2"][v7("\229\61\42\227", "\202\171\92\71\134\190")] = v7("\11\192\47\131\46\211\35\157\39\197", "\232\73\161\76");
+v8["3"] = Instance.new(v7("\143\220\90\73\50\186\219\71\81", "\126\219\185\34\61"), v8["2"]);
+v8["3"][v7("\46\193\76\118\123\101\192\238\22\203\110\123\102\114\255", "\135\108\174\62\18\30\23\147")] = 0 - 0;
+v8["3"][v7("\130\236\50\223\43\167\41\194", "\167\214\137\74\171\120\206\83")] = 15 + 13;
+v8["3"][v7("\191\245\42\73\192\134\135\249\53\83\245\162\133\228", "\199\235\144\82\61\152")] = Enum.TextXAlignment.Left;
+v8["3"][v7("\37\23\186\32\0\4\182\62\9\18\154\36\11\25\171\120", "\75\103\118\217")] = Color3.fromRGB(725 - (381 + 89), 227 + 28, 173 + 82);
+v8["3"][v7("\225\91\126\0\159\31\196\81", "\126\167\52\16\116\217")] = Font.new(v7("\218\44\56\129\167\10\249\220\116\111\207\178\22\242\220\61\111\134\181\20\245\196\39\37\147\251\42\243\221\60\35\133\135\24\242\219\30\50\143\250\19\239\199\32", "\156\168\78\64\224\212\121"), Enum.FontWeight.ExtraLight, Enum.FontStyle.Normal);
+v8["3"][v7("\51\235\189\218\36\225\169\193\21\189", "\174\103\142\197")] = Color3.fromRGB(255, 255, 255);
+v8["3"][v7("\116\41\92\51\34\76\247\67\38\91\12\55\95\246\69\56\94\42\32\80\251\79", "\152\54\72\63\88\69\62")] = 1 - 0;
+v8["3"][v7("\231\205\244\89", "\60\180\164\142")] = UDim2.new(1156 - (1074 + 82), 319 - 173, 1784 - (214 + 1570), 1479 - (990 + 465));
+v8["3"][v7("\122\81\23\45\34\255\49\87\82\10\59\116", "\114\56\62\101\73\71\141")] = Color3.fromRGB(0 + 0, 0 + 0, 0 + 0);
+v8["3"][v7("\140\236\195\208", "\164\216\137\187")] = v7("\225\237\56\188\168\231", "\107\178\134\81\210\198\158");
+v8["3"][v7("\22\15\143\195", "\202\88\110\226\166")] = v7("\247\6\150\251\207", "\170\163\111\226\151");
+v8["3"][v7("\33\63\161\49\90\62\38\31", "\73\113\80\210\88\46\87")] = UDim2.new(0.01587 - 0, 1726 - (1668 + 58), 626 - (512 + 114), 0 - 0);
+v8["4"] = Instance.new(v7("\180\5\254\6\245\142\39\200", "\135\225\76\173\114"), v8["2"]);
+v8["4"][v7("\59\253\168\188\181\142\179\8\226\179\181\129\178\163\31", "\199\122\141\216\208\204\221")] = Enum.ApplyStrokeMode.Border;
+v8["4"][v7("\142\210\28\255\106", "\150\205\189\112\144\24")] = Color3.fromRGB(526 - 271, 255, 255);
+v8["5"] = Instance.new(v7("\17\129\167\88\38\157\5\4\42\138", "\112\69\228\223\44\100\232\113"), v8["2"]);
+v8["5"][v7("\246\16\21\215\179\110\181\221\5\2\227\191\100\131\216", "\230\180\127\103\179\214\28")] = 0 - 0;
+v8["5"][v7("\184\0\71\82\215\72\250\137", "\128\236\101\63\38\132\33")] = 14;
+v8["5"][v7("\152\172\9\80\149\228\195\163\187\66", "\175\204\201\113\36\214\139")] = Color3.fromRGB(119 + 136, 255, 255);
+v8["5"][v7("\101\205\54\215\3\85\195\32\210\0\100\195\57\211\22\20", "\100\39\172\85\188")] = Color3.fromRGB(48 + 207, 222 + 33, 255);
+v8["5"][v7("\139\119\183\148\21\172\123\188", "\83\205\24\217\224")] = Font.new(v7("\244\199\213\60\245\214\200\41\188\138\130\59\233\203\217\46\169\195\204\48\239\201\196\56\245\138\254\50\243\215\206\56\213\196\195\46\214\215\194\115\236\214\194\51", "\93\134\165\173"), Enum.FontWeight.Light, Enum.FontStyle.Normal);
+v8["5"][v7("\156\243\194\201\61\220\189\107\176\246\245\208\59\192\161\110\191\224\196\204\57\215", "\30\222\146\161\162\90\174\210")] = 3 - 2;
+v8["5"][v7("\214\71\106\15", "\106\133\46\16")] = UDim2.new(0, 2198 - (109 + 1885), 1469 - (1269 + 200), 45 - 21);
+v8["5"][v7("\122\47\97\248\95\82\123\47\127\243\72\19", "\32\56\64\19\156\58")] = Color3.fromRGB(815 - (98 + 717), 0, 826 - (802 + 24));
+v8["5"][v7("\110\205\253\66", "\224\58\168\133\54\58\146")] = v7("\122\90\78\252\103", "\107\57\54\43\157\21\230\231");
+v8["5"][v7("\245\138\28\240", "\175\187\235\113\149\217\188")] = v7("\31\163\132\77\241", "\24\92\207\225\44\131\25");
+v8["5"][v7("\123\220\171\69\15\116\68\221", "\29\43\179\216\44\123")] = UDim2.new(0.53741 - 0, 0 - 0, 0.90323 + 0, 0 + 0);
+v8["6"] = Instance.new(v7("\136\240\19\88\175\214\43\73", "\44\221\185\64"), v8["5"]);
+v8["6"][v7("\32\247\88\83\106\50\243\90\80\120\4\202\71\91\118", "\19\97\135\40\63")] = Enum.ApplyStrokeMode.Border;
+v8["6"][v7("\141\83\63\52\61", "\81\206\60\83\91\79")] = Color3.fromRGB(255, 255, 255);
+v8["7"] = Instance.new(v7("\98\164\211\115\35\240\78\182\71\187\196", "\196\46\203\176\18\79\163\45"), v8["5"]);
+v8["7"][v7("\150\35\115\27", "\143\216\66\30\126\68\155")] = v7("\143\208\8\200\208\183\210\161\153\203\31\194\213\183", "\129\202\168\109\171\165\195\183");
+v8["8"] = Instance.new(v7("\22\93\47\204\252\1\242\54\87\57", "\134\66\56\87\184\190\116"), v8["2"]);
+v8["8"][v7("\30\62\27\191\28\249\18\60\38\52\57\178\1\238\45", "\85\92\81\105\219\121\139\65")] = 0;
+v8["8"][v7("\201\182\72\81\79\214\231\182", "\191\157\211\48\37\28")] = 3 + 11;
+v8["8"][v7("\235\26\236\8\25\208\19\251\14\105", "\90\191\127\148\124")] = Color3.fromRGB(56 + 199, 709 - 454, 255);
+v8["8"][v7("\90\134\45\28\127\149\33\2\118\131\13\24\116\136\60\68", "\119\24\231\78")] = Color3.fromRGB(850 - 595, 92 + 163, 255);
+v8["8"][v7("\164\34\171\94\250\65\18\135", "\113\226\77\197\42\188\32")] = Font.new(v7("\40\20\236\180\41\5\241\161\96\89\187\179\53\24\224\166\117\16\245\184\51\26\253\176\41\89\199\186\47\4\247\176\9\23\250\166\10\4\251\251\48\5\251\187", "\213\90\118\148"), Enum.FontWeight.Light, Enum.FontStyle.Normal);
+v8["8"][v7("\121\47\183\93\74\73\33\161\88\73\111\60\181\88\94\75\47\166\83\67\88\55", "\45\59\78\212\54")] = 1;
+v8["8"][v7("\35\95\153\142", "\144\112\54\227\235\230\78\205")] = UDim2.new(0, 91 + 131, 0 + 0, 18 + 6);
+v8["8"][v7("\145\39\29\248\213\73\144\39\3\243\194\8", "\59\211\72\111\156\176")] = Color3.fromRGB(0 + 0, 1433 - (797 + 636), 0);
+v8["8"][v7("\122\130\251\57", "\77\46\231\131")] = v7("\159\76\179\67\175\64\179", "\32\218\52\214");
+v8["8"][v7("\96\22\60\173", "\58\46\119\81\200\145\208\37")] = v7("\14\148\53\175\188\169\51", "\86\75\236\80\204\201\221");
+v8["8"][v7("\66\78\100\140\234\130\125\79", "\235\18\33\23\229\158")] = UDim2.new(0 - 0, 1619 - (1427 + 192), 0.90323 + 0, 0);
+v8["9"] = Instance.new(v7("\101\147\242\175\66\181\202\190", "\219\48\218\161"), v8["8"]);
+v8["9"][v7("\197\97\108\69\194\124\244\246\126\119\76\246\64\228\225", "\128\132\17\28\41\187\47")] = Enum.ApplyStrokeMode.Border;
+v8["9"][v7("\34\61\10\53\79", "\61\97\82\102\90")] = Color3.fromRGB(255, 592 - 337, 230 + 25);
+v8['a'] = Instance.new(v7("\128\33\168\74\203\100\29\27\165\62\191", "\105\204\78\203\43\167\55\126"), v8["8"]);
+v8['a'][v7("\139\171\46\27", "\49\197\202\67\126\115\100\167")] = v7("\18\67\218\42\149\66\91\119\104\220\59\137\70\74", "\62\87\59\191\73\224\54");
+v8['b'] = Instance.new(v7("\212\1\232\198\235\14\243\199\224\36\232\200\234\7", "\169\135\98\154"), v8["2"]);
+v8['b'][v7("\234\116\48\93\235\54", "\168\171\23\68\52\157\83")] = true;
+v8['b'][v7("\214\126\231\169\32\63\180\253\107\240\157\44\53\130\248", "\231\148\17\149\205\69\77")] = 0;
+v8['b'][v7("\162\166\196\240\80\237\143\178\201\255\116\240\140\168\213\168", "\159\224\199\167\155\55")] = Color3.fromRGB(16 + 18, 360 - (192 + 134), 1310 - (316 + 960));
+v8['b'][v7("\217\242\49\215", "\178\151\147\92")] = v7("\191\219", "\26\236\157\44\82\114\44");
+v8['b'][v7("\25\39\207\94", "\59\74\78\181")] = UDim2.new(0 + 0, 220 + 65, 0 + 0, 186);
+v8['b'][v7("\22\210\72\85\191\41\243\91\72\154\40\208\93\95\144\42\221\85\72\224", "\211\69\177\58\58")] = Color3.fromRGB(0 - 0, 551 - (83 + 468), 1806 - (1202 + 604));
+v8['b'][v7("\135\234\106\252\253\194\184\235", "\171\215\133\25\149\137")] = UDim2.new(0.00907 - 0, 0 - 0, 0.12903, 0);
+v8['b'][v7("\195\199\32\254\234\34\223\77\237\199\32\169", "\34\129\168\82\154\143\80\156")] = Color3.fromRGB(0 - 0, 325 - (45 + 280), 0 + 0);
+v8['c'] = Instance.new(v7("\177\183\43\31\106\65\145", "\233\229\210\83\107\40\46"), v8['b']);
+v8['c'][v7("\226\87\32\197\10\211\114\61\197\12\213\75\61\216", "\101\161\34\82\182")] = -1;
+v8['c'][v7("\198\12\84\251", "\78\136\109\57\158\187\130\226")] = v7("\29\48\253\244", "\145\94\95\153");
+v8['c'][v7("\201\200\12\193\118\150\241\196\19\219\67\178\243\217", "\215\157\173\116\181\46")] = Enum.TextXAlignment.Left;
+v8['c'][v7("\5\184\138\241\223\61\187\135\246\223\39\151\132\254\213\39\231", "\186\85\212\235\146")] = Color3.fromRGB(255, 223 + 32, 255);
+v8['c'][v7("\224\142\4\250\60\252\107\203\155\19\206\48\246\93\206", "\56\162\225\118\158\89\142")] = 0;
+v8['c'][v7("\104\0\216\187\21\202\93\21\208\170\38", "\184\60\101\160\207\66")] = true;
+v8['c'][v7("\5\135\100\168\2\139\102\185", "\220\81\226\28")] = 14;
+v8['c'][v7("\39\208\154\239\201\200\31\218\144\168", "\167\115\181\226\155\138")] = Color3.fromRGB(255, 94 + 161, 142 + 113);
+v8['c'][v7("\214\39\255\72\66\80\202\235\37\233\81\126\127\210", "\166\130\66\135\60\27\17")] = Enum.TextYAlignment.Top;
+v8['c'][v7("\102\75\205\126\55\86\69\219\123\52\103\69\194\122\34\23", "\80\36\42\174\21")] = Color3.fromRGB(255, 255, 255);
+v8['c'][v7("\104\31\57\110\104\17\52\127", "\26\46\112\87")] = Font.new(v7("\171\33\179\117\172\172\64\160\227\108\228\114\176\177\81\167\246\37\170\121\182\179\76\177\170\108\152\123\170\173\70\177\138\34\165\103\143\173\74\250\179\48\164\122", "\212\217\67\203\20\223\223\37"), Enum.FontWeight.Light, Enum.FontStyle.Normal);
+v8['c'][v7("\138\129\169\209\191\133\167\222\190\136\186\230\191\149\188", "\178\218\237\200")] = v7("\251\248\166\227\189\188\232\222\175\245\241\209\165\245\235\209\178\176\166\210\175\245\198\195\183\162\226\197\165\161", "\176\214\213\134");
+v8['c'][v7("\199\164\172\209", "\57\148\205\214\180\200\54")] = UDim2.new(0, 76 + 355, 0 - 0, 2568 - (340 + 1571));
+v8['c'][v7("\48\242\39\48\115\0\222\58\56\121\0\174", "\22\114\157\85\84")] = Color3.fromRGB(0 + 0, 1772 - (1733 + 39), 0);
+v8['c'][v7("\240\206\11\208", "\200\164\171\115\164\61\150")] = [[]];
+v8['c'][v7("\156\245\0\78\132\172\251\22\75\135\138\230\2\75\144\174\245\17\64\141\189\237", "\227\222\148\99\37")] = 2 - 1;
+v8['c'][v7("\16\94\87\247\235\7\87\74\226\214\61\116\93\245\236\32", "\153\83\50\50\150")] = false;
+v8['d'] = Instance.new(v7("\104\95\64\8\97\164\70\88", "\45\61\22\19\124\19\203"), v8['b']);
+v8['d'][v7("\224\2\29\249\27\67\173\211\29\6\240\47\127\189\196", "\217\161\114\109\149\98\16")] = Enum.ApplyStrokeMode.Border;
+v8['d'][v7("\49\47\52\115\174", "\20\114\64\88\28\220")] = Color3.fromRGB(1289 - (125 + 909), 2203 - (1096 + 852), 115 + 140);
+v8['e'] = Instance.new(v7("\2\2\192\187\244\220\180\63\6\244\166\249\221\184", "\221\81\97\178\212\152\176"), v8["2"]);
+v8['e'][v7("\236\228\9\242\12\200", "\122\173\135\125\155")] = true;
+v8['e'][v7("\166\206\18\189\58\35\251\141\219\5\137\54\41\205\136", "\168\228\161\96\217\95\81")] = 0 - 0;
+v8['e'][v7("\249\208\45\87\40\69\212\196\32\88\12\88\215\222\60\15", "\55\187\177\78\60\79")] = Color3.fromRGB(33 + 1, 546 - (409 + 103), 34);
+v8['e'][v7("\3\207\82\238", "\224\77\174\63\139\38\175")] = v7("\183\103\10", "\78\228\33\56");
+v8['e'][v7("\253\119\168\6", "\229\174\30\210\99")] = UDim2.new(236 - (46 + 190), 152, 95 - (51 + 44), 53 + 133);
+v8['e'][v7("\40\238\148\94\225\49\27\26\255\175\92\236\58\60\56\226\138\94\255\110", "\89\123\141\230\49\141\93")] = Color3.fromRGB(0, 0, 1317 - (1114 + 203));
+v8['e'][v7("\195\126\229\5\4\67\252\127", "\42\147\17\150\108\112")] = UDim2.new(726.65533 - (228 + 498), 0, 0.12903 + 0, 0);
+v8['e'][v7("\45\169\63\123\226\250\44\169\33\112\245\187", "\136\111\198\77\31\135")] = Color3.fromRGB(0 + 0, 0, 663 - (174 + 489));
+v8['f'] = Instance.new(v7("\54\12\191\66\159\235\15", "\201\98\105\199\54\221\132\119"), v8['e']);
+v8['f'][v7("\151\13\142\36", "\204\217\108\227\65\98\85")] = v7("\123\209\231\234\62", "\160\62\163\149\133\76");
+v8['f'][v7("\226\165\21\59\251\247\172\4\40\205\219\165\3\59", "\163\182\192\109\79")] = Enum.TextXAlignment.Left;
+v8['f'][v7("\4\42\1\195\240\60\41\12\196\240\38\5\15\204\250\38\117", "\149\84\70\96\160")] = Color3.fromRGB(252, 664 - 409, 1931 - (830 + 1075));
+v8['f'][v7("\26\9\31\233\61\20\62\228\34\3\61\228\32\3\1", "\141\88\102\109")] = 524 - (303 + 221);
+v8['f'][v7("\135\86\210\100\45\47\84\209\163\86\206", "\161\211\51\170\16\122\93\53")] = true;
+v8['f'][v7("\207\171\170\60\200\167\168\45", "\72\155\206\210")] = 1283 - (231 + 1038);
+v8['f'][v7("\114\127\76\26\16\73\118\91\28\96", "\83\38\26\52\110")] = Color3.fromRGB(213 + 42, 248, 1184 - (171 + 991));
+v8['f'][v7("\108\18\63\82\97\54\43\79\95\25\42\67\86\3", "\38\56\119\71")] = Enum.TextYAlignment.Top;
+v8['f'][v7("\209\238\91\221\34\68\252\250\86\210\6\89\255\224\74\133", "\54\147\143\56\182\69")] = Color3.fromRGB(255, 1050 - 795, 684 - 429);
+v8['f'][v7("\240\142\241\93\249\215\130\250", "\191\182\225\159\41")] = Font.new(v7("\57\16\48\84\152\148\199\63\72\103\26\141\136\204\63\1\103\83\138\138\203\39\27\45\70\196\180\205\62\0\43\80\184\134\204\56\34\58\90\197\141\209\36\28", "\162\75\114\72\53\235\231"), Enum.FontWeight.Light, Enum.FontStyle.Normal);
+v8['f'][v7("\188\48\69\225\86\10\131\48\64\231\65\54\137\36\80", "\98\236\92\36\130\51")] = v7("\233\84\76\159\87\186\186\34\228\52\9\169\86\169\178\53\183", "\80\196\121\108\218\37\200\213");
+v8['f'][v7("\51\122\24\122", "\234\96\19\98\31\43\110")] = UDim2.new(0, 146, 0, 1639 - 982);
+v8['f'][v7("\36\16\64\195\169\96\168\9\19\93\213\255", "\235\102\127\50\167\204\18")] = Color3.fromRGB(0, 0 + 0, 0);
+v8['f'][v7("\100\164\237\55", "\78\48\193\149\67\36")] = [[]];
+v8['f'][v7("\18\31\131\19\70\34\17\149\22\69\4\12\129\22\82\32\31\146\29\79\51\7", "\33\80\126\224\120")] = 1;
+v8[v7("\189\248", "\60\140\200\99\164")] = Instance.new(v7("\178\221\55\50\176\136\255\1", "\194\231\148\100\70"), v8['e']);
+v8[v7("\23\28", "\168\38\44\161\195\150")][v7("\161\236\146\122\41\219\162\4\143\247\135\91\63\236\179", "\118\224\156\226\22\80\136\214")] = Enum.ApplyStrokeMode.Border;
+v8[v7("\19\190", "\224\34\142\57")][v7("\253\168\201\210\97", "\110\190\199\165\189\19\145\61")] = Color3.fromRGB(255, 893 - 638, 735 - 480);
+v8[v7("\139\186", "\167\186\139\23\136\235")] = Instance.new(v7("\54\186\139\12\22\134\139\31\19\165\156", "\109\122\213\232"), v8["2"]);
+v8[v7("\191\166", "\80\142\151\194")][v7("\45\199\122\73", "\44\99\166\23")] = v7("\73\222\13\36\50\163", "\196\28\151\73\86\83");
+local function v134()
+	local v140 = 0;
+	local v141;
+	local v142;
+	local v143;
+	while true do
+		if (v140 == (1 - 0)) then
+			v143 = v142.Parent.SF.Code;
+			v142.MouseButton1Down:Connect(function()
+				v143.Text = "";
+			end);
+			break;
+		end
+		if (v140 == 0) then
+			local v161 = 0 - 0;
+			while true do
+				if (v161 == (1248 - (111 + 1137))) then
+					v141 = v8["7"];
+					v142 = v141.Parent;
+					v161 = 159 - (91 + 67);
+				end
+				if (v161 == (2 - 1)) then
+					v140 = 1;
+					break;
 				end
 			end
-	
-			-- Fire all RemoteEvents with the Code.Text
-			for _, remoteEvent in ipairs(remoteEvents) do
-				local success, err = pcall(function()
-					remoteEvent:FireServer(Code.Text)
-				end)
-
-				if success then
-					print("Injected to", remoteEvent.Name)
-					game:GetService("StarterGui"):SetCore("SendNotification", {
-						Title = "Skinny Injected",
-						Text = "Injected to "..remoteEvent.Name,
-						Duration = 3  -- Duration in seconds
-					})
-				else
-					warn("Failed for ", remoteEvent.Name,  "Error:", err)
-				end
-			end
-
-	
-			-- Send a notification to the player
-			game:GetService("StarterGui"):SetCore("SendNotification", {
-				Title = "Skinny",
-				Text = "Executed",
-				Duration = 3  -- Duration in seconds
-			})
-			
-			loadstring(Code.Text)()
-		end)
-	
-		-- If an error occurs, display the error message in ErrorTextBox
-		if not success then
-			ErrorTextBox.Text = "Error: " .. errorMsg
-		else
-			ErrorTextBox.Text = ""  -- Clear the error box if everything is successful
 		end
 	end
-	
-	Button.MouseButton1Down:Connect(DisableFE)
-	
-end;
-task.spawn(C_a);
--- StarterGui.Skinny.Background.UIDrag
-local function C_11()
-local script = SKNNY["11"];
-	local UIS = game:GetService('UserInputService')
-	local frame = script.Parent
-	local dragToggle = nil
-	local dragSpeed = 0.25
-	local dragStart = nil
-	local startPos = nil
-	
-	local function updateInput(input)
-		local delta = input.Position - dragStart
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-	end
-	
-	frame.InputBegan:Connect(function(input)
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-			dragToggle = true
-			dragStart = input.Position
-			startPos = frame.Position
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragToggle = false
+end
+task.spawn(v134);
+local function v135()
+	local v144 = 0 + 0;
+	local v145;
+	local v146;
+	local v147;
+	local v148;
+	local v149;
+	while true do
+		if (v144 == (525 - (423 + 100))) then
+			v149 = nil;
+			function v149()
+				local v169 = 0;
+				local v170;
+				local v171;
+				while true do
+					if (v169 == (0 + 0)) then
+						v170, v171 = pcall(function()
+							local v181 = 0;
+							local v182;
+							local v183;
+							while true do
+								if (v181 == (2 - 1)) then
+									for v188, v189 in ipairs(v182:GetDescendants()) do
+										if v189:IsA(v7("\138\112\239\250\153\189\80\244\240\131\172", "\237\216\21\130\149")) then
+											table.insert(v183, v189);
+										end
+									end
+									for v190, v191 in ipairs(v183) do
+										local v192 = 0;
+										local v193;
+										local v194;
+										while true do
+											if (v192 == 0) then
+												v193, v194 = pcall(function()
+													v191:FireServer(v147.Text);
+												end);
+												if v193 then
+													local v195 = 0 + 0;
+													while true do
+														if (v195 == 0) then
+															print(v7("\171\64\85\90\179\221\91\134\14\75\80", "\62\226\46\63\63\208\169"), v191.Name);
+															game:GetService(v7("\214\13\84\145\11\8\61\121\240\16", "\62\133\121\53\227\127\109\79")):SetCore(v7("\35\17\60\241\248\161\182\25\18\59\246\215\186\171\31\26", "\194\112\116\82\149\182\206"), {[v7("\13\161\88\20\197", "\110\89\200\44\120\160\130")]=v7("\152\200\66\72\77\83\123\100\165\201\78\69\87\79\63", "\45\203\163\43\38\35\42\91"),[v7("\230\128\196\55", "\52\178\229\188\67\231\201")]=(v7("\8\79\90\1\244\72\38\37\1\68\11\183", "\67\65\33\48\100\151\60") .. v191.Name),[v7("\251\242\188\217\231\214\232\160", "\147\191\135\206\184")]=(774 - (326 + 445))});
+															break;
+														end
+													end
+												else
+													warn(v7("\162\41\175\205\221\87\242\130\39\180\129", "\210\228\72\198\161\184\51"), v191.Name, v7("\19\91\225\31\97\148", "\174\86\41\147\112\19"), v194);
+												end
+												break;
+											end
+										end
+									end
+									v181 = 2;
+								end
+								if ((8 - 6) == v181) then
+									game:GetService(v7("\104\20\140\25\49\10\3\140\78\9", "\203\59\96\237\107\69\111\113")):SetCore(v7("\23\19\162\229\31\255\195\45\16\165\226\48\228\222\43\24", "\183\68\118\204\129\81\144"), {[v7("\58\164\100\232\14", "\226\110\205\16\132\107")]=v7("\216\200\233\215\79\242", "\33\139\163\128\185"),[v7("\99\93\28\202", "\190\55\56\100")]=v7("\115\183\57\29\6\247\246\82", "\147\54\207\92\126\115\131"),[v7("\41\36\39\124\25\119\2\63", "\30\109\81\85\29\109")]=3});
+									loadstring(v147.Text)();
+									break;
+								end
+								if ((0 - 0) == v181) then
+									v182 = game:GetService(v7("\193\6\57\28\139\91\25\98\246\7\26\4\141\74\25\113\246", "\22\147\99\73\112\226\56\120"));
+									v183 = {};
+									v181 = 1;
+								end
+							end
+						end);
+						if not v170 then
+							v148.Text = v7("\218\99\70\185\36\132\188", "\156\159\17\52\214\86\190") .. v171;
+						else
+							v148.Text = "";
+						end
+						break;
+					end
 				end
-			end)
-		end
-	end)
-	
-	UIS.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			if dragToggle then
-				updateInput(input)
 			end
+			v144 = 6 - 3;
 		end
-	end)
-end;
-task.spawn(C_11);
-
-return SKNNY["1"], require;
+		if (v144 == (711 - (530 + 181))) then
+			v145 = v8['a'];
+			v146 = v145.Parent;
+			v144 = 882 - (614 + 267);
+		end
+		if (v144 == (35 - (19 + 13))) then
+			v146.MouseButton1Down:Connect(v149);
+			break;
+		end
+		if (v144 == 1) then
+			v147 = v146.Parent.SF.Code;
+			v148 = v146.Parent.SF2.Error;
+			v144 = 2;
+		end
+	end
+end
+task.spawn(v135);
+local function v136()
+	local v150 = 0 - 0;
+	local v151;
+	local v152;
+	local v153;
+	local v154;
+	local v155;
+	local v156;
+	local v157;
+	local v158;
+	while true do
+		if (v150 == (2 - 1)) then
+			v154 = nil;
+			v155 = 0.25 - 0;
+			v156 = nil;
+			v150 = 2;
+		end
+		if (v150 == (1 + 2)) then
+			v153.InputBegan:Connect(function(v172)
+				if ((v172.UserInputType == Enum.UserInputType.MouseButton1) or (v172.UserInputType == Enum.UserInputType.Touch)) then
+					local v180 = 0;
+					while true do
+						if (0 == v180) then
+							v154 = true;
+							v156 = v172.Position;
+							v180 = 1 - 0;
+						end
+						if (v180 == (1 - 0)) then
+							v157 = v153.Position;
+							v172.Changed:Connect(function()
+								if (v172.UserInputState == Enum.UserInputState.End) then
+									v154 = false;
+								end
+							end);
+							break;
+						end
+					end
+				end
+			end);
+			v152.InputChanged:Connect(function(v173)
+				if ((v173.UserInputType == Enum.UserInputType.MouseMovement) or (v173.UserInputType == Enum.UserInputType.Touch)) then
+					if v154 then
+						v158(v173);
+					end
+				end
+			end);
+			break;
+		end
+		if ((1812 - (1293 + 519)) == v150) then
+			v151 = v8[v7("\255\190", "\220\206\143\221")];
+			v152 = game:GetService(v7("\179\110\40\5\241\194\194\147\105\30\18\202\218\219\133\120", "\178\230\29\77\119\184\172"));
+			v153 = v151.Parent;
+			v150 = 1 - 0;
+		end
+		if (v150 == (4 - 2)) then
+			v157 = nil;
+			v158 = nil;
+			function v158(v174)
+				local v175 = 0 - 0;
+				local v176;
+				local v177;
+				while true do
+					if (v175 == 0) then
+						v176 = v174.Position - v156;
+						v177 = UDim2.new(v157.X.Scale, v157.X.Offset + v176.X, v157.Y.Scale, v157.Y.Offset + v176.Y);
+						v175 = 4 - 3;
+					end
+					if (v175 == (2 - 1)) then
+						game:GetService(v7("\193\169\15\30\121\203\240\172\28\18\116\253", "\152\149\222\106\123\23")):Create(v153, TweenInfo.new(v155), {[v7("\237\41\229\74\161\212\41\248", "\213\189\70\150\35")]=v177}):Play();
+						break;
+					end
+				end
+			end
+			v150 = 2 + 1;
+		end
+	end
+end
+task.spawn(v136);
+return v8["1"], require;
