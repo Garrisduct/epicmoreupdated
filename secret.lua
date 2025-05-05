@@ -1,140 +1,190 @@
--- Gui to Lua
--- Version: 3.2
+local SKNNY = {};
 
--- Instances:
+-- StarterGui.Skinny
+SKNNY["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+SKNNY["1"]["ResetOnSpawn"] = false
+SKNNY["1"]["Name"] = [[Skinny]];
+SKNNY["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
-local Skinny = Instance.new("ScreenGui")
-local Background = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
-local Clear = Instance.new("TextButton")
-local Execute = Instance.new("TextButton")
-local SF = Instance.new("ScrollingFrame")
-local Code = Instance.new("TextBox")
-local SF2 = Instance.new("ScrollingFrame")
-local Error = Instance.new("TextBox")
 
---Properties:
+-- StarterGui.Skinny.Background
+SKNNY["2"] = Instance.new("Frame", SKNNY["1"]);
+SKNNY["2"]["BorderSizePixel"] = 0;
+SKNNY["2"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
+SKNNY["2"]["Size"] = UDim2.new(0, 441, 0, 248);
+SKNNY["2"]["Position"] = UDim2.new(0.17107, 0, 0.13005, 0);
+SKNNY["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SKNNY["2"]["Name"] = [[Background]];
 
-Skinny.Name = "Skinny"
-Skinny.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Skinny.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Background.Name = "Background"
-Background.Parent = Skinny
-Background.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Background.BorderSizePixel = 0
-Background.Position = UDim2.new(0.171073094, 0, 0.13005051, 0)
-Background.Size = UDim2.new(0, 441, 0, 248)
+-- StarterGui.Skinny.Background.Title
+SKNNY["3"] = Instance.new("TextLabel", SKNNY["2"]);
+SKNNY["3"]["BorderSizePixel"] = 0;
+SKNNY["3"]["TextSize"] = 28;
+SKNNY["3"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+SKNNY["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SKNNY["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.ExtraLight, Enum.FontStyle.Normal);
+SKNNY["3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SKNNY["3"]["BackgroundTransparency"] = 1;
+SKNNY["3"]["Size"] = UDim2.new(0, 146, 0, 24);
+SKNNY["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SKNNY["3"]["Text"] = [[Skinny]];
+SKNNY["3"]["Name"] = [[Title]];
+SKNNY["3"]["Position"] = UDim2.new(0.01587, 0, 0, 0);
 
-Title.Name = "Title"
-Title.Parent = Background
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BackgroundTransparency = 1.000
-Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.0158730168, 0, 0, 0)
-Title.Size = UDim2.new(0, 146, 0, 24)
-Title.Font = Enum.Font.Unknown
-Title.Text = "Skinny"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextSize = 28.000
-Title.TextXAlignment = Enum.TextXAlignment.Left
 
-Clear.Name = "Clear"
-Clear.Parent = Background
-Clear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Clear.BackgroundTransparency = 1.000
-Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Clear.BorderSizePixel = 0
-Clear.Position = UDim2.new(0.537414968, 0, 0.90322578, 0)
-Clear.Size = UDim2.new(0, 204, 0, 24)
-Clear.Font = Enum.Font.SourceSansLight
-Clear.Text = "Clear"
-Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
-Clear.TextSize = 14.000
+-- StarterGui.Skinny.Background.UIStroke
+SKNNY["4"] = Instance.new("UIStroke", SKNNY["2"]);
+SKNNY["4"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+SKNNY["4"]["Color"] = Color3.fromRGB(255, 255, 255);
 
-Execute.Name = "Execute"
-Execute.Parent = Background
-Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Execute.BackgroundTransparency = 1.000
-Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Execute.BorderSizePixel = 0
-Execute.Position = UDim2.new(0, 0, 0.90322578, 0)
-Execute.Size = UDim2.new(0, 222, 0, 24)
-Execute.Font = Enum.Font.SourceSansLight
-Execute.Text = "Execute"
-Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
-Execute.TextSize = 14.000
 
-SF.Name = "SF"
-SF.Parent = Background
-SF.Active = true
-SF.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-SF.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SF.BorderSizePixel = 0
-SF.Position = UDim2.new(0.00907029491, 0, 0.129032254, 0)
-SF.Size = UDim2.new(0, 285, 0, 186)
+-- StarterGui.Skinny.Background.Clear
+SKNNY["5"] = Instance.new("TextButton", SKNNY["2"]);
+SKNNY["5"]["BorderSizePixel"] = 0;
+SKNNY["5"]["TextSize"] = 14;
+SKNNY["5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SKNNY["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SKNNY["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Light, Enum.FontStyle.Normal);
+SKNNY["5"]["BackgroundTransparency"] = 1;
+SKNNY["5"]["Size"] = UDim2.new(0, 204, 0, 24);
+SKNNY["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SKNNY["5"]["Text"] = [[Clear]];
+SKNNY["5"]["Name"] = [[Clear]];
+SKNNY["5"]["Position"] = UDim2.new(0.53741, 0, 0.90323, 0);
 
-Code.Name = "Code"
-Code.Parent = SF
-Code.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Code.BackgroundTransparency = 1.000
-Code.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Code.BorderSizePixel = 0
-Code.Size = UDim2.new(0, 431, 0, 657)
-Code.Font = Enum.Font.SourceSansLight
-Code.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
-Code.PlaceholderText = "-- Skinny was made by @sawdust"
-Code.Text = ""
-Code.TextColor3 = Color3.fromRGB(255, 255, 255)
-Code.TextSize = 14.000
-Code.TextWrapped = true
-Code.TextXAlignment = Enum.TextXAlignment.Left
-Code.TextYAlignment = Enum.TextYAlignment.Top
 
-SF2.Name = "SF2"
-SF2.Parent = Background
-SF2.Active = true
-SF2.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-SF2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SF2.BorderSizePixel = 0
-SF2.Position = UDim2.new(0.65532881, 0, 0.129032254, 0)
-SF2.Size = UDim2.new(0, 152, 0, 186)
+-- StarterGui.Skinny.Background.Clear.UIStroke
+SKNNY["6"] = Instance.new("UIStroke", SKNNY["5"]);
+SKNNY["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+SKNNY["6"]["Color"] = Color3.fromRGB(255, 255, 255);
 
-Error.Name = "Error"
-Error.Parent = SF2
-Error.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Error.BackgroundTransparency = 1.000
-Error.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Error.BorderSizePixel = 0
-Error.Size = UDim2.new(0, 146, 0, 657)
-Error.Font = Enum.Font.SourceSansLight
-Error.PlaceholderColor3 = Color3.fromRGB(251, 255, 25)
-Error.PlaceholderText = "-- Error Messages"
-Error.Text = ""
-Error.TextColor3 = Color3.fromRGB(255, 247, 21)
-Error.TextSize = 14.000
-Error.TextWrapped = true
-Error.TextXAlignment = Enum.TextXAlignment.Left
-Error.TextYAlignment = Enum.TextYAlignment.Top
 
--- Scripts:
+-- StarterGui.Skinny.Background.Clear.Execute Script
+SKNNY["7"] = Instance.new("LocalScript", SKNNY["5"]);
+SKNNY["7"]["Name"] = [[Execute Script]];
 
-local function URCN_fake_script() -- Clear.Execute Script 
-	local script = Instance.new('LocalScript', Clear)
 
+-- StarterGui.Skinny.Background.Execute
+SKNNY["8"] = Instance.new("TextButton", SKNNY["2"]);
+SKNNY["8"]["BorderSizePixel"] = 0;
+SKNNY["8"]["TextSize"] = 14;
+SKNNY["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SKNNY["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SKNNY["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Light, Enum.FontStyle.Normal);
+SKNNY["8"]["BackgroundTransparency"] = 1;
+SKNNY["8"]["Size"] = UDim2.new(0, 222, 0, 24);
+SKNNY["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SKNNY["8"]["Text"] = [[Execute]];
+SKNNY["8"]["Name"] = [[Execute]];
+SKNNY["8"]["Position"] = UDim2.new(0, 0, 0.90323, 0);
+
+
+-- StarterGui.Skinny.Background.Execute.UIStroke
+SKNNY["9"] = Instance.new("UIStroke", SKNNY["8"]);
+SKNNY["9"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+SKNNY["9"]["Color"] = Color3.fromRGB(255, 255, 255);
+
+
+-- StarterGui.Skinny.Background.Execute.Execute Script
+SKNNY["a"] = Instance.new("LocalScript", SKNNY["8"]);
+SKNNY["a"]["Name"] = [[Execute Script]];
+
+
+-- StarterGui.Skinny.Background.SF
+SKNNY["b"] = Instance.new("ScrollingFrame", SKNNY["2"]);
+SKNNY["b"]["Active"] = true;
+SKNNY["b"]["BorderSizePixel"] = 0;
+SKNNY["b"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
+SKNNY["b"]["Name"] = [[SF]];
+SKNNY["b"]["Size"] = UDim2.new(0, 285, 0, 186);
+SKNNY["b"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+SKNNY["b"]["Position"] = UDim2.new(0.00907, 0, 0.12903, 0);
+SKNNY["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Skinny.Background.SF.Code
+SKNNY["c"] = Instance.new("TextBox", SKNNY["b"]);
+SKNNY["c"]["CursorPosition"] = -1;
+SKNNY["c"]["Name"] = [[Code]];
+SKNNY["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+SKNNY["c"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+SKNNY["c"]["BorderSizePixel"] = 0;
+SKNNY["c"]["TextWrapped"] = true;
+SKNNY["c"]["TextSize"] = 14;
+SKNNY["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SKNNY["c"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+SKNNY["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SKNNY["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Light, Enum.FontStyle.Normal);
+SKNNY["c"]["PlaceholderText"] = [[-- Skinny was made by @sawdust]];
+SKNNY["c"]["Size"] = UDim2.new(0, 431, 0, 657);
+SKNNY["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SKNNY["c"]["Text"] = [[]];
+SKNNY["c"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Skinny.Background.SF.UIStroke
+SKNNY["d"] = Instance.new("UIStroke", SKNNY["b"]);
+SKNNY["d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+SKNNY["d"]["Color"] = Color3.fromRGB(255, 255, 255);
+
+
+-- StarterGui.Skinny.Background.SF2
+SKNNY["e"] = Instance.new("ScrollingFrame", SKNNY["2"]);
+SKNNY["e"]["Active"] = true;
+SKNNY["e"]["BorderSizePixel"] = 0;
+SKNNY["e"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34);
+SKNNY["e"]["Name"] = [[SF2]];
+SKNNY["e"]["Size"] = UDim2.new(0, 152, 0, 186);
+SKNNY["e"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+SKNNY["e"]["Position"] = UDim2.new(0.65533, 0, 0.12903, 0);
+SKNNY["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Skinny.Background.SF2.Error
+SKNNY["f"] = Instance.new("TextBox", SKNNY["e"]);
+SKNNY["f"]["Name"] = [[Error]];
+SKNNY["f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+SKNNY["f"]["PlaceholderColor3"] = Color3.fromRGB(252, 255, 26);
+SKNNY["f"]["BorderSizePixel"] = 0;
+SKNNY["f"]["TextWrapped"] = true;
+SKNNY["f"]["TextSize"] = 14;
+SKNNY["f"]["TextColor3"] = Color3.fromRGB(255, 248, 22);
+SKNNY["f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+SKNNY["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SKNNY["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Light, Enum.FontStyle.Normal);
+SKNNY["f"]["PlaceholderText"] = [[-- Error Messages]];
+SKNNY["f"]["Size"] = UDim2.new(0, 146, 0, 657);
+SKNNY["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SKNNY["f"]["Text"] = [[]];
+SKNNY["f"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.Skinny.Background.SF2.UIStroke
+SKNNY["10"] = Instance.new("UIStroke", SKNNY["e"]);
+SKNNY["10"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+SKNNY["10"]["Color"] = Color3.fromRGB(255, 255, 255);
+
+
+-- StarterGui.Skinny.Background.UIDrag
+SKNNY["11"] = Instance.new("LocalScript", SKNNY["2"]);
+SKNNY["11"]["Name"] = [[UIDrag]];
+
+
+-- StarterGui.Skinny.Background.Clear.Execute Script
+local function C_7()
+local script = SKNNY["7"];
 	local Button = script.Parent
 	local Code = Button.Parent.SF.Code
 	
 	Button.MouseButton1Down:Connect(function()
 		Code.Text = ""
 	end)
-end
-coroutine.wrap(URCN_fake_script)()
-local function BBIBW_fake_script() -- Execute.Execute Script 
-	local script = Instance.new('LocalScript', Execute)
-
+end;
+task.spawn(C_7);
+-- StarterGui.Skinny.Background.Execute.Execute Script
+local function C_a()
+local script = SKNNY["a"];
 	local Button = script.Parent
 	local Code = Button.Parent.SF.Code
 	local ErrorTextBox = Button.Parent.SF2.Error
@@ -156,7 +206,7 @@ local function BBIBW_fake_script() -- Execute.Execute Script
 			for _, remoteEvent in ipairs(remoteEvents) do
 				remoteEvent:FireServer(Code.Text) -- Fire with the Code.Text
 				remoteEvent:FireServer()
-				remoteEvent.OnClientEvent:Connect(Code.Text)
+				
 			end
 	
 			-- Example of dynamically executing code using loadstring (if needed)
@@ -187,11 +237,11 @@ local function BBIBW_fake_script() -- Execute.Execute Script
 	
 	Button.MouseButton1Down:Connect(DisableFE)
 	
-end
-coroutine.wrap(BBIBW_fake_script)()
-local function MEKDH_fake_script() -- Background.UIDrag 
-	local script = Instance.new('LocalScript', Background)
-
+end;
+task.spawn(C_a);
+-- StarterGui.Skinny.Background.UIDrag
+local function C_11()
+local script = SKNNY["11"];
 	-- Made by Real_IceyDev (@lceyDex) --
 	-- Simple UI dragger (PC Only/Any device that has a mouse) --
 	
@@ -229,5 +279,7 @@ local function MEKDH_fake_script() -- Background.UIDrag
 			end
 		end
 	end)
-end
-coroutine.wrap(MEKDH_fake_script)()
+end;
+task.spawn(C_11);
+
+return SKNNY["1"], require;
