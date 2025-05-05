@@ -210,20 +210,17 @@ local script = SKNNY["a"];
 				end)
 
 				if success then
-					print("It Injected for ", remoteEvent.Name)
+					print("Injected to", remoteEvent.Name)
+					game:GetService("StarterGui"):SetCore("SendNotification", {
+						Title = "Skinny Injected",
+						Text = "Injected to "..remoteEvent.Name,
+						Duration = 3  -- Duration in seconds
+					})
 				else
 					warn("Failed for ", remoteEvent.Name,  "Error:", err)
 				end
 			end
 
-	
-			-- Example of dynamically executing code using loadstring (if needed)
-			-- Ensure the string inside loadstring is valid code
-			local dynamicCode = "print('Dynamic code executed!')" -- Replace with your actual code string
-			local success, result = pcall(loadstring(dynamicCode))
-			if not success then
-				errorMsg = "Error executing dynamic code: " .. result
-			end
 	
 			-- Send a notification to the player
 			game:GetService("StarterGui"):SetCore("SendNotification", {
