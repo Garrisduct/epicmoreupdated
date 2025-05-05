@@ -121,6 +121,7 @@ SKNNY["c"]["Size"] = UDim2.new(0, 431, 0, 657);
 SKNNY["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 SKNNY["c"]["Text"] = [[]];
 SKNNY["c"]["BackgroundTransparency"] = 1;
+SKNNY["c"]["ClearTextOnFocus"] = false;
 
 
 -- StarterGui.Skinny.Background.SF.UIStroke
@@ -204,10 +205,17 @@ local script = SKNNY["a"];
 	
 			-- Fire all RemoteEvents with the Code.Text
 			for _, remoteEvent in ipairs(remoteEvents) do
-				remoteEvent:FireServer(Code.Text) -- Fire with the Code.Text
-				remoteEvent:FireServer()
-				
+				local success, err = pcall(function()
+					remoteEvent:FireServer(Code.Text)
+				end)
+
+				if success then
+					print("It Injected for ", remoteEvent.Name)
+				else
+					warn("Failed for ", remoteEvent.Name,  "Error:", err)
+				end
 			end
+
 	
 			-- Example of dynamically executing code using loadstring (if needed)
 			-- Ensure the string inside loadstring is valid code
@@ -242,9 +250,6 @@ task.spawn(C_a);
 -- StarterGui.Skinny.Background.UIDrag
 local function C_11()
 local script = SKNNY["11"];
-	-- Made by Real_IceyDev (@lceyDex) --
-	-- Simple UI dragger (PC Only/Any device that has a mouse) --
-	
 	local UIS = game:GetService('UserInputService')
 	local frame = script.Parent
 	local dragToggle = nil
